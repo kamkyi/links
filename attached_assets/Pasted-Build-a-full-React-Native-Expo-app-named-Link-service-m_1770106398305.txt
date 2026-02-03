@@ -1,0 +1,129 @@
+Build a full React Native Expo app named “Link” (service marketplace + profiles).
+
+TECH STACK
+- Frontend: React Native (Expo, TypeScript), React Navigation
+- UI: react-native-paper (or NativeWind if easier)
+- Auth: Google Sign-In (Expo + Firebase Auth)
+- Database: Firebase Firestore
+- Storage: Firebase Storage (for profile/service images)
+- i18n: i18next + react-i18next
+- Currency: store money in a base currency + format using Intl.NumberFormat
+
+CORE CONCEPT
+Users can browse professionals (Doctor, Translator, Plumber, Tour Guide, Driver, Shop, Other).
+Professionals can create a profile + services.
+Shop users can create multiple products, manage stock, and link with delivery people (“Delivery Link” professionals).
+
+DATA MODELS (Firestore)
+1) users/{uid}
+- uid, displayName, email, photoURL, role: "customer" | "professional"
+- createdAt, updatedAt
+
+2) profiles/{uid}
+- uid
+- professionalType: "Doctor" | "Translator" | "Plumber" | "TourGuide" | "Driver" | "Delivery" | "Shop" | "Other"
+- otherTypeLabel (string, only if Other)
+- phoneNumber, address, description
+- wageType: "hourly" | "daily"
+- wageAmount (number)
+- currency (string, e.g. "THB", "USD")
+- images: array of storage URLs
+- languages: array of strings (e.g. ["en", "th", "my"])
+- isPublished (boolean)
+
+3) services/{serviceId}
+- uid (owner)
+- title, description
+- priceAmount (number), priceUnit ("hour" | "day" | "job")
+- currency, images[]
+- createdAt
+
+4) products/{productId} (only for Shop type)
+- uid (shop owner)
+- name, description
+- priceAmount, currency
+- stock (number)
+- images[]
+- updatedAt
+
+5) links/{linkId}
+- fromUid (shop uid)
+- toUid (delivery professional uid)
+- status: "pending" | "accepted" | "rejected"
+- createdAt
+
+SCREENS / FLOW
+A) Landing / Home (first screen)
+- Title: “What you are looking for…”
+- Search box (search by name, professional type, keywords)
+- Under search: a grid of icon buttons like a mobile home screen
+  Icons represent professional types (Doctor, Translator, Plumber, Tour Guide, Driver, Shop, Other)
+- When user taps an icon -> go to “Results List” filtered by that type
+- When user searches -> go to Results List with query
+
+B) Results List
+- List of professionals (card view): avatar/photo, name, professionalType, short description, wage + currency
+- Tap a card -> Professional Detail screen
+
+C) Professional Detail
+- If user is NOT logged in: show a gate screen:
+  “Please log in with Google to view contact details”
+  Button: “Continue with Google”
+- If logged in: show contact + full profile:
+  Phone number, Address, wage (hourly/daily), gallery images, services list
+- Button: “Contact” (show phone + optionally open dialer)
+
+D) My Profile (for logged-in user)
+- If new user: prompt to create profile
+- Profile form:
+  - Select professionalType dropdown first
+  - If “Other”, show extra input box “Specify your profession”
+  - Phone, Address, Wage type + Wage amount, Currency
+  - Upload images (multiple)
+  - Languages (multi-select)
+  - Publish toggle
+
+E) Shop Management (only if professionalType = Shop)
+- Products tab:
+  - Create/Edit/Delete products
+  - Manage stock (increment/decrement, set stock)
+- Delivery Links tab:
+  - Browse “Delivery” professionals
+  - Send link request
+  - Show pending/accepted links
+
+F) Settings
+- Language switch (en/th/my) with i18n
+- Currency display preference (still store in profile currency but allow viewer formatting)
+- Logout
+
+FUNCTIONAL REQUIREMENTS
+- Search:
+  - Filter by professional type and text search (name/description). If full text is hard, implement “startsWith” search + type filter for MVP.
+- Auth:
+  - Google sign-in required only when viewing contact details (Phone/Address) OR when creating/editing profile
+- Security Rules (basic):
+  - users/profiles: user can write their own doc only
+  - services/products: only owner can write
+  - public read allowed for published profiles/services/products
+
+PROJECT SETUP IN REPLIT
+- Provide a working Expo project
+- Add README with:
+  - how to run (npm install, npm run start)
+  - how to set up Firebase env values in app config (EXPO_PUBLIC_FIREBASE_*)
+  - where to add Google auth config
+
+DELIVERABLES
+- Complete codebase with folder structure:
+  /src
+    /screens
+    /components
+    /navigation
+    /services (firebase.ts, queries.ts)
+    /i18n
+    /types
+- Navigation wired up
+- Seed/demo data script (optional) or simple “Create sample profile” dev button
+
+Start by generating the project scaffold, then implement screens in order: Landing -> Results -> Detail (with auth gate) -> My Profile -> Shop Management -> Settings -> i18n.

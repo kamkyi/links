@@ -1,30 +1,54 @@
 import { Platform } from "react-native";
 
-const tintColorLight = "#007AFF";
-const tintColorDark = "#0A84FF";
+const primaryLight = "#00A896";
+const primaryDark = "#00C9B4";
+const accentLight = "#FF6B35";
+const accentDark = "#FF8B5E";
 
 export const Colors = {
   light: {
-    text: "#11181C",
+    text: "#1A1A1A",
+    textSecondary: "#6B7280",
     buttonText: "#FFFFFF",
-    tabIconDefault: "#687076",
-    tabIconSelected: tintColorLight,
-    link: "#007AFF",
-    backgroundRoot: "#FFFFFF", // Elevation 0
-    backgroundDefault: "#F2F2F2", // Elevation 1
-    backgroundSecondary: "#E6E6E6", // Elevation 2
-    backgroundTertiary: "#D9D9D9", // Elevation 3
+    tabIconDefault: "#6B7280",
+    tabIconSelected: primaryLight,
+    link: primaryLight,
+    primary: primaryLight,
+    primaryDark: "#008577",
+    accent: accentLight,
+    backgroundRoot: "#F8F9FA",
+    backgroundDefault: "#FFFFFF",
+    backgroundSecondary: "#F0F1F3",
+    backgroundTertiary: "#E5E7EB",
+    border: "#E5E7EB",
+    success: "#10B981",
+    error: "#EF4444",
+    warning: "#F59E0B",
+    cardBackground: "#FFFFFF",
+    inputBackground: "#FFFFFF",
+    placeholder: "#9CA3AF",
   },
   dark: {
     text: "#ECEDEE",
+    textSecondary: "#9BA1A6",
     buttonText: "#FFFFFF",
     tabIconDefault: "#9BA1A6",
-    tabIconSelected: tintColorDark,
-    link: "#0A84FF",
-    backgroundRoot: "#1F2123", // Elevation 0
-    backgroundDefault: "#2A2C2E", // Elevation 1
-    backgroundSecondary: "#353739", // Elevation 2
-    backgroundTertiary: "#404244", // Elevation 3
+    tabIconSelected: primaryDark,
+    link: primaryDark,
+    primary: primaryDark,
+    primaryDark: "#00A896",
+    accent: accentDark,
+    backgroundRoot: "#0F1012",
+    backgroundDefault: "#1A1C1E",
+    backgroundSecondary: "#252729",
+    backgroundTertiary: "#303234",
+    border: "#303234",
+    success: "#34D399",
+    error: "#F87171",
+    warning: "#FBBF24",
+    cardBackground: "#1A1C1E",
+    inputBackground: "#1A1C1E",
+    placeholder: "#6B7280",
   },
 };
 

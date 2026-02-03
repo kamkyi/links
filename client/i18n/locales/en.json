@@ -1,0 +1,102 @@
+{
+  "home": {
+    "title": "What are you looking for?",
+    "searchPlaceholder": "Search professionals...",
+    "categories": "Categories"
+  },
+  "professionalTypes": {
+    "Doctor": "Doctor",
+    "Translator": "Translator",
+    "Plumber": "Plumber",
+    "TourGuide": "Tour Guide",
+    "Driver": "Driver",
+    "Delivery": "Delivery",
+    "Shop": "Shop",
+    "Other": "Other"
+  },
+  "results": {
+    "title": "Results",
+    "searchResults": "Search Results",
+    "noResults": "No professionals found",
+    "noResultsDescription": "Try a different search or category",
+    "perHour": "/hour",
+    "perDay": "/day"
+  },
+  "detail": {
+    "contact": "Contact",
+    "phone": "Phone",
+    "address": "Address",
+    "languages": "Languages",
+    "services": "Services",
+    "wage": "Rate"
+  },
+  "authGate": {
+    "title": "Sign in to view contact details",
+    "description": "Connect with professionals by signing in",
+    "button": "Continue with Google"
+  },
+  "profile": {
+    "title": "My Profile",
+    "createProfile": "Create Profile",
+    "editProfile": "Edit Profile",
+    "noProfile": "You haven't created a profile yet",
+    "noProfileDescription": "Create a professional profile to connect with customers",
+    "professionalType": "Professional Type",
+    "otherTypeLabel": "Specify your profession",
+    "phoneNumber": "Phone Number",
+    "address": "Address",
+    "description": "Description",
+    "wageType": "Rate Type",
+    "hourly": "Hourly",
+    "daily": "Daily",
+    "wageAmount": "Rate Amount",
+    "currency": "Currency",
+    "languages": "Languages",
+    "images": "Photos",
+    "addImages": "Add Photos",
+    "publish": "Publish Profile",
+    "save": "Save",
+    "displayName": "Display Name"
+  },
+  "shop": {
+    "title": "Shop Management",
+    "products": "Products",
+    "deliveryLinks": "Delivery Links",
+    "addProduct": "Add Product",
+    "noProducts": "No products yet",
+    "noProductsDescription": "Add your first product to start selling",
+    "productName": "Product Name",
+    "stock": "Stock",
+    "price": "Price",
+    "pendingLinks": "Pending",
+    "acceptedLinks": "Accepted",
+    "noLinks": "No delivery links yet",
+    "noLinksDescription": "Connect with delivery professionals"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "currency": "Display Currency",
+    "logout": "Log Out",
+    "logoutConfirm": "Are you sure you want to log out?",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "languages": {
+    "en": "English",
+    "th": "Thai",
+    "my": "Burmese"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "back": "Back"
+  }
+}

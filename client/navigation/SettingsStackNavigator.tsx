@@ -2,27 +2,26 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useTranslation } from "react-i18next";
 
-import HomeScreen from "@/screens/HomeScreen";
-import { HeaderTitle } from "@/components/HeaderTitle";
+import SettingsScreen from "@/screens/SettingsScreen";
 import { useScreenOptions } from "@/hooks/useScreenOptions";
 
-export type HomeStackParamList = {
-  Home: undefined;
+export type SettingsStackParamList = {
+  Settings: undefined;
 };
 
-const Stack = createNativeStackNavigator<HomeStackParamList>();
+const Stack = createNativeStackNavigator<SettingsStackParamList>();
 
-export default function HomeStackNavigator() {
+export default function SettingsStackNavigator() {
   const screenOptions = useScreenOptions();
   const { t } = useTranslation();
 
   return (
     <Stack.Navigator screenOptions={screenOptions}>
       <Stack.Screen
-        name="Home"
-        component={HomeScreen}
+        name="Settings"
+        component={SettingsScreen}
         options={{
-          headerTitle: () => <HeaderTitle title="Link" />,
+          title: t("settings.title"),
         }}
       />
     </Stack.Navigator>

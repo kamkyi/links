@@ -1,0 +1,102 @@
+{
+  "home": {
+    "title": "คุณกำลังมองหาอะไร?",
+    "searchPlaceholder": "ค้นหาผู้เชี่ยวชาญ...",
+    "categories": "หมวดหมู่"
+  },
+  "professionalTypes": {
+    "Doctor": "แพทย์",
+    "Translator": "ล่าม",
+    "Plumber": "ช่างประปา",
+    "TourGuide": "ไกด์นำเที่ยว",
+    "Driver": "คนขับรถ",
+    "Delivery": "จัดส่ง",
+    "Shop": "ร้านค้า",
+    "Other": "อื่นๆ"
+  },
+  "results": {
+    "title": "ผลลัพธ์",
+    "searchResults": "ผลการค้นหา",
+    "noResults": "ไม่พบผู้เชี่ยวชาญ",
+    "noResultsDescription": "ลองค้นหาหรือหมวดหมู่อื่น",
+    "perHour": "/ชั่วโมง",
+    "perDay": "/วัน"
+  },
+  "detail": {
+    "contact": "ติดต่อ",
+    "phone": "โทรศัพท์",
+    "address": "ที่อยู่",
+    "languages": "ภาษา",
+    "services": "บริการ",
+    "wage": "อัตรา"
+  },
+  "authGate": {
+    "title": "เข้าสู่ระบบเพื่อดูข้อมูลติดต่อ",
+    "description": "เชื่อมต่อกับผู้เชี่ยวชาญโดยการเข้าสู่ระบบ",
+    "button": "ดำเนินการต่อด้วย Google"
+  },
+  "profile": {
+    "title": "โปรไฟล์ของฉัน",
+    "createProfile": "สร้างโปรไฟล์",
+    "editProfile": "แก้ไขโปรไฟล์",
+    "noProfile": "คุณยังไม่ได้สร้างโปรไฟล์",
+    "noProfileDescription": "สร้างโปรไฟล์มืออาชีพเพื่อเชื่อมต่อกับลูกค้า",
+    "professionalType": "ประเภทวิชาชีพ",
+    "otherTypeLabel": "ระบุอาชีพของคุณ",
+    "phoneNumber": "หมายเลขโทรศัพท์",
+    "address": "ที่อยู่",
+    "description": "คำอธิบาย",
+    "wageType": "ประเภทอัตรา",
+    "hourly": "รายชั่วโมง",
+    "daily": "รายวัน",
+    "wageAmount": "จำนวนเงิน",
+    "currency": "สกุลเงิน",
+    "languages": "ภาษา",
+    "images": "รูปภาพ",
+    "addImages": "เพิ่มรูปภาพ",
+    "publish": "เผยแพร่โปรไฟล์",
+    "save": "บันทึก",
+    "displayName": "ชื่อที่แสดง"
+  },
+  "shop": {
+    "title": "การจัดการร้านค้า",
+    "products": "สินค้า",
+    "deliveryLinks": "การเชื่อมต่อจัดส่ง",
+    "addProduct": "เพิ่มสินค้า",
+    "noProducts": "ยังไม่มีสินค้า",
+    "noProductsDescription": "เพิ่มสินค้าชิ้นแรกเพื่อเริ่มขาย",
+    "productName": "ชื่อสินค้า",
+    "stock": "สต็อก",
+    "price": "ราคา",
+    "pendingLinks": "รอดำเนินการ",
+    "acceptedLinks": "ยอมรับแล้ว",
+    "noLinks": "ยังไม่มีการเชื่อมต่อจัดส่ง",
+    "noLinksDescription": "เชื่อมต่อกับผู้จัดส่ง"
+  },
+  "settings": {
+    "title": "การตั้งค่า",
+    "language": "ภาษา",
+    "currency": "สกุลเงินที่แสดง",
+    "logout": "ออกจากระบบ",
+    "logoutConfirm": "คุณแน่ใจหรือไม่ที่จะออกจากระบบ?",
+    "cancel": "ยกเลิก",
+    "confirm": "ยืนยัน"
+  },
+  "languages": {
+    "en": "อังกฤษ",
+    "th": "ไทย",
+    "my": "พม่า"
+  },
+  "common": {
+    "loading": "กำลังโหลด...",
+    "error": "เกิดข้อผิดพลาด",
+    "retry": "ลองอีกครั้ง",
+    "save": "บันทึก",
+    "cancel": "ยกเลิก",
+    "delete": "ลบ",
+    "edit": "แก้ไข",
+    "add": "เพิ่ม",
+    "search": "ค้นหา",
+    "back": "กลับ"
+  }
+}
